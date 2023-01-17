@@ -3,12 +3,12 @@
             <div class="container">
 
                 <div class="navbar-brand">
-                    <div class="logo_laravel">
+                    <div class="logo">
                         <h1><i class="fa-duotone fa-l"></i><i class="fa-duotone fa-f"></i></h1>
                     </div>
                 </div>
 
-                <div class="collapse navbar-collapse">
+                <div>
                     <!-- Left Side Of Navbar -->
 
                     <!-- Right Side Of Navbar -->
@@ -24,12 +24,11 @@
                         </li>
                         @endif
                         @else
-                        <div class="d-flex navbar">
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase text-bold" href="{{route('home')}}">Home</a>
+                        <li class="nav-item px-5">
+                            <a class="nav-link text-uppercase pb-page" href="{{route('home')}}">Public Page</a>
                         </li>
 
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown px-5">
 
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
@@ -47,7 +46,6 @@
                                 </form>
                             </div>
                         </li>
-                        </div>
                         @endguest
                     </ul>
                 </div>
