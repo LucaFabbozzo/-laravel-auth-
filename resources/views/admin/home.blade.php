@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container w-75 m-auto text-center pt-5 text-uppercase">
-        <p>Questa è la dashboard di {{ Auth::user()->name }}</p>
-        <p>{{ Auth::user()->email }}</p>
+    <div class="container w-50 m-auto text-center pt-5 text-uppercase">
+        <div class="box p-5 bg-dark text-light">
+            <p>{{ Auth::user()->name }}</p>
+            <p>{{ Auth::user()->email }}</p>
+        </div>
     </div>
 @endsection
