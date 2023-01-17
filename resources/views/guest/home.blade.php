@@ -2,5 +2,7 @@
 
 
 @section('content')
-    <h1>Ciao</h1>
+<div class="container">
+    <h1>My Portfolio</h1>
+</div>
 @endsection
