@@ -1,21 +1,18 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="#">
+
+                <a class="navbar-brand" href="#">
                     <div class="logo_laravel">
-                        <h1>LOGO</h1>
+                        <h1><i class="fa-duotone fa-l"></i><i class="fa-duotone fa-f"></i></h1>
                     </div>
-                    {{-- config('app.name', 'Laravel') --}}
                 </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse">
                     <!-- Left Side Of Navbar -->
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav">
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">
@@ -27,8 +24,9 @@
                         </li>
                         @endif
                         @else
+                        <div class="d-flex navbar">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('home')}}">Home</a>
+                            <a class="nav-link text-uppercase text-bold" href="{{route('home')}}">Home</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -49,6 +47,7 @@
                                 </form>
                             </div>
                         </li>
+                        </div>
                         @endguest
                     </ul>
                 </div>
