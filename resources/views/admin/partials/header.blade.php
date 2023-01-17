@@ -2,11 +2,11 @@
 
             <div class="container">
 
-                <a class="navbar-brand" href="#">
+                <div class="navbar-brand">
                     <div class="logo_laravel">
                         <h1><i class="fa-duotone fa-l"></i><i class="fa-duotone fa-f"></i></h1>
                     </div>
-                </a>
+                </div>
 
                 <div class="collapse navbar-collapse">
                     <!-- Left Side Of Navbar -->
