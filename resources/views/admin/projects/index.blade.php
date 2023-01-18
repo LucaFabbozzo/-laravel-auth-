@@ -2,7 +2,8 @@
 
 @section('content')
     <div class="container w-75 m-auto pt-5">
-        <h1 class="fs-4 pb-4">My Projects List</h1>
+            <h1 class="fs-4 pb-4 d-inline">My Projects List</h1>
+            <a class="btn btn-outline-secondary fs-6 fw-light mx-3 text-uppercase create" href="{{route('admin.projects.create')}}">Add new project</a>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -20,7 +21,7 @@
                     <td>{{ $project->client_name }}</td>
                     <td>{{ $project->summary }}</td>
                     <td><a class="btn btn-outline-primary" href="{{route('admin.projects.show', $project)}}"><i class="fa-solid fa-eye"></i></a></td>
-                    <td><a class="btn btn-outline-success" href="{{route('admin.projects.create', $project)}}"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                    <td><a class="btn btn-outline-success" href="{{route('admin.projects.edit', $project)}}"><i class="fa-regular fa-pen-to-square"></i></a></td>
                      <td>
                         @include('admin.partials.form-delete', ['title'=>$project->name, 'id'=>$project->id])
                     </td>
