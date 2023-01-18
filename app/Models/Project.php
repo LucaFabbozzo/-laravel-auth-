@@ -10,6 +10,8 @@ class Project extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'client_name', 'summary', 'cover_image', 'slug'];
+
     public static function generateSlug($string)
     {
         //bisogna importare il str (string)

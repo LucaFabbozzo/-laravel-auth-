@@ -20,6 +20,7 @@
                     <td>{{ $project->client_name }}</td>
                     <td>{{ $project->summary }}</td>
                     <td><a class="btn btn-outline-primary" href="{{route('admin.projects.show', $project)}}"><i class="fa-solid fa-eye"></i></a></td>
+                    <td><a class="btn btn-outline-success" href="{{route('admin.projects.create', $project)}}"><i class="fa-regular fa-pen-to-square"></i></a></td>
                 </tr>
                 @empty
 
