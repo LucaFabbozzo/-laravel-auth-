@@ -21,7 +21,7 @@ class ProjectsTableSeeder extends Seeder
         // $table->string('client_name', 100);
         // $table->text('summary');
         // $table->string('cover_image');
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 40; $i++) {
             $new_project = new Project();
             $new_project->name = $faker->sentence(3);
             $new_project->slug = Project::generateSlug($new_project->name);
