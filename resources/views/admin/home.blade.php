@@ -8,3 +8,7 @@
         </div>
     </div>
 @endsection
+
+@section('title')
+   | Admin
+@endsection
