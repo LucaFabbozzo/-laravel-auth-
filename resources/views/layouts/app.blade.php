@@ -33,7 +33,7 @@
         <div class="container-fluid main-wrapper">
             <div class="row h-100">
                 @auth
-                    <div class="col-1 h-100 bg-dark">
+                    <div class="col-1 bg-dark">
                         @include('admin.partials.aside')
                     </div>
                 @endauth

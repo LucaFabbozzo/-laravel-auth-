@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container w-75 m-auto pt-5">
-        <h1 class="text-uppercase fs-5 fw-bold pb-4">Insert new project</h1>
-        <a href="{{route('admin.projects.index')}}" class="btn btn-outline-secondary text-uppercase my-4">Back to the List</a>
+    <div class="container w-75 m-auto pt-4">
+         <a href="{{route('admin.projects.index')}}" class="btn btn-outline-secondary text-uppercase mb-3">Back to the List</a>
+        <h1 class="text-uppercase fs-5 fw-bold pb-2">Insert new project</h1>
         <form action="{{ route('admin.projects.store') }}" method="POST">
             @csrf
             <div class="mb-3">

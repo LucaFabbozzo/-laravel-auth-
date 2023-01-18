@@ -1,8 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container w-75 m-auto text-center pt-5 text-uppercase">
-        <form action="">
+    <div class="container w-75 m-auto pt-4">
+        <a href="{{route('admin.projects.index', $project)}}" class="btn btn-outline-secondary text-uppercase mb-3">Back</a>
+        <h1 class="text-uppercase fs-5 fw-bold pb-2">Edit the project</h1>
+        <form action="{{ route('admin.projects.update', $project) }}" method="POST">
+            @csrf
+            @method('PUT')
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" name="name" id="name" placeholder="project name">
@@ -19,6 +23,7 @@
                 <label for="cover_image" class="form-label">Cover Image</label>
                 <input type="text" class="form-control" name="cover_image" id="cover_image" placeholder="cover image">
             </div>
+            <button type="submit" class="btn btn-primary">Send</button>
         </form>
     </div>
 @endsection
