@@ -90,6 +90,8 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        // con with() passo i dati in sessione alla vista
+        return redirect()->route('admin.projects.index')->with('deleted', "The comic $project->name was succesfully deleted");
     }
 }
