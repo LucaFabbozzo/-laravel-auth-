@@ -16,11 +16,11 @@
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="{{ route('login') }}">Login</a>
+                            <a class="nav-link text-light text-uppercase fs-6" href="{{ route('login') }}">Login</a>
                         </li>
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="{{ route('register') }}">Register</a>
+                            <a class="nav-link text-light text-uppercase fs-6" href="{{ route('register') }}">Register</a>
                         </li>
                         @endif
                         @else
@@ -30,7 +30,7 @@
 
 
                         <li class="nav-item">
-                                <a class="dropdown-item text-light mt-2 px-3" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                <a class="dropdown-item text-light mt-2 px-3 text-uppercase fs-6" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
