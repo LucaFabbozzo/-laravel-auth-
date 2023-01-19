@@ -5,8 +5,8 @@ body {
 }
 
 main {
-    height: 100%;
-    overflow-y: hidden;
+    height: calc(100vh - 82px);
+    overflow-y: auto;
 }
 
 .box {
