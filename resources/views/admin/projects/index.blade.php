@@ -3,7 +3,6 @@
 @section('content')
     <div class="container w-75 m-auto pt-3">
             <h1 class="fs-5 text-uppercase">My Projects List</h1>
-            <a class="btn btn-outline-secondary fw-light text-uppercase create mb-2" href="{{route('admin.projects.create')}}">Add new project</a>
         <table class="table table-striped mb-5">
             <thead>
                 <tr>
@@ -32,7 +31,6 @@
             </tbody>
         </table>
     </div>
-
      {{$projects->links()}}
 @endsection
 

@@ -6,6 +6,7 @@
             <p>{{ Auth::user()->name }}</p>
             <p>{{ Auth::user()->email }}</p>
         </div>
+        <a class="btn btn-outline-secondary fw-light text-uppercase create mt-5" href="{{route('admin.projects.create')}}">Add new project</a>
     </div>
 @endsection
 

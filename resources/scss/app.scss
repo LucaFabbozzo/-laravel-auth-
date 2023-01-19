@@ -4,6 +4,11 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+main {
+    height: 100%;
+    overflow-y: hidden;
+}
+
 .box {
     border: 1px solid #bdbdbd;
 }

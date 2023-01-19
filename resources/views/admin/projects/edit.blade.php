@@ -3,25 +3,54 @@
 @section('content')
     <div class="container w-75 m-auto pt-4">
         <a href="{{route('admin.projects.index', $project)}}" class="btn btn-outline-secondary text-uppercase mb-3">Back</a>
-        <h1 class="text-uppercase fs-5 fw-bold pb-2">Edit the project</h1>
+        <h1 class="text-uppercase fs-5 fw-bold pb-2">Edit the project: {{ $project->name }}</h1>
+        @if ($errors->any())
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form action="{{ route('admin.projects.update', $project) }}" method="POST">
             @csrf
             @method('PUT')
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" name="name" id="name" placeholder="project name">
+                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" value="{{ old('name', $project->name) }}" placeholder="project name">
+                @error('name')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
              <div class="mb-3">
                 <label for="client_name" class="form-label">Client Name</label>
-                <input type="text" class="form-control" name="client_name" id="client_name" placeholder="client name">
+                <input type="text" class="form-control @error('client_name') is-invalid @enderror" name="client_name" id="client_name" value="{{ old('client_name', $project->client_name) }}"  placeholder="client name">
+                @error('client_name')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
              <div class="mb-3">
                 <label for="summary" class="form-label">Summary</label>
-                <input type="text" class="form-control" name="summary" id="summary" placeholder="summary">
+                <input type="text" class="form-control @error('summary') is-invalid @enderror" name="summary" id="summary" value="{{ old('summary', $project->summary) }}" placeholder="summary">
+                @error('summary')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
              <div class="mb-3">
-                <label for="cover_image" class="form-label">Cover Image</label>
-                <input type="text" class="form-control" name="cover_image" id="cover_image" placeholder="cover image">
+                <label for="cover_image" class="form-label">URL Image</label>
+                <input type="text" class="form-control @error('cover_image') is-invalid @enderror" name="cover_image" id="cover_image" value="{{ old('cover_image', $project->cover_image) }}" placeholder="URL Image">
+                @error('cover_image')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
             <button type="submit" class="btn btn-primary">Send</button>
         </form>
@@ -29,5 +58,5 @@
 @endsection
 
 @section('title')
-   | Admin
+   | {{ $project->name }}
 @endsection

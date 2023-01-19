@@ -15,7 +15,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::orderBy('id', 'desc')->paginate(3);
+        $projects = Project::orderBy('id', 'desc')->paginate(4);
 
         return view('admin.projects.index', compact('projects'));
     }
@@ -77,7 +77,7 @@ class ProjectController extends Controller
      * @param  \App\Models\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Project $project)
+    public function update(ProjectRequest $request, Project $project)
     {
         $form_data = $request->all();
 
