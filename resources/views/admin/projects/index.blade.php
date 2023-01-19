@@ -31,7 +31,7 @@
             </tbody>
         </table>
     </div>
-     {{$projects->links()}}
+        {{$projects->links()}}
 @endsection
 
 @section('title')

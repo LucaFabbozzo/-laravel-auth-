@@ -33,9 +33,9 @@
                     </div>
                 @enderror
             </div>
-             <div class="mb-3">
+            <div class="mb-3">
                 <label for="summary" class="form-label">Summary</label>
-                <input type="text" class="form-control @error('summary') is-invalid @enderror" name="summary" id="summary" value="{{ old('summary') }}" placeholder="summary">
+                <textarea class="form-control @error('summary') is-invalid @enderror" id="summary" name="summary" placeholder="Insert a summary" rows="3"></textarea>
                 @error('summary')
                     <div class="invalid-feedback">
                         {{ $message }}
