@@ -51,7 +51,7 @@
                     </div>
                 @enderror
                 <div class="image mt-2">
-                    <img width="120" id="output-image" src="" alt="">
+                    <img width="80" id="output-image" src="" alt="">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Send</button>
@@ -59,9 +59,9 @@
     </div>
     <script>
         function showImage(event){
-            const tagImage = document.getElementById('output-image');
-            tagImage.src = URL.createObjectUrl(event.target.files[0]);
-        }
+        const tagImage = document.getElementById('output-image');
+        tagImage.src = URL.createObjectURL(event.target.files[0]);
+    }
     </script>
 @endsection
 

@@ -59,10 +59,10 @@
         </form>
     </div>
     <script>
-        function showImage(event){
-            const tagImage = document.getElementById('output-image');
-            tagImage.src = URL.createObjectUrl(event.target.files[0]);
-        }
+       function showImage(event){
+        const tagImage = document.getElementById('output-image');
+        tagImage.src = URL.createObjectURL(event.target.files[0]);
+    }
     </script>
 @endsection
 
