@@ -13,6 +13,8 @@ main {
     border: 1px solid #bdbdbd;
 }
 
+
+
 .pag-box {
     .pagination {
         .page-item {
@@ -36,6 +38,9 @@ main {
     font-weight: bold;
     border: 1px solid rgb(189, 189, 189);
     border-radius: 10px;
+    width: 130px;
+    font-size: 0.8rem;
+    text-align: center;
 }
 
 .pb-page:hover {
@@ -49,7 +54,7 @@ main {
 
 .lf-links {
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
    &:hover {
     color: #aeaeae;
    }

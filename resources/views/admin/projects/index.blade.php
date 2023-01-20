@@ -6,15 +6,17 @@
         <table class="table table-striped mb-4">
             <thead>
                 <tr>
-                    <th scope="col">Cover</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Client Name</th>
-                    <th scope="col">Summary</th>
+                    <th scope="col"><a class="text-decoration-none text-dark" href="{{ route('admin.projects.orderby', ['id', $direction]) }}">ID</a></th>
+                    <th scope="col"><a class="text-decoration-none text-dark" href="{{ route('admin.projects.orderby', ['cover_image', $direction]) }}">Cover</a></th>
+                    <th scope="col"><a class="text-decoration-none text-dark" href="{{ route('admin.projects.orderby', ['name', $direction]) }}">Name</a></th>
+                    <th scope="col"><a class="text-decoration-none text-dark" href="{{ route('admin.projects.orderby', ['client_name', $direction]) }}">Client Name</a></th>
+                    <th scope="col"><a class="text-decoration-none text-dark" href="{{ route('admin.projects.orderby', ['summary', $direction]) }}">Summary</a></th>
                 </tr>
             </thead>
             <tbody>
                 @forelse ($projects as $project)
                 <tr>
+                    <td>{{ $project->id }}</td>
                     <td><img style="width: 60px" src="{{asset('storage/'. $project->cover_image)}}" alt="{{$project->image_original_name}}"></td>
                     <td>{{ $project->name }}</th>
                     <td>{{ $project->client_name }}</td>
