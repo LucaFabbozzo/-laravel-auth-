@@ -28,7 +28,7 @@
                             <form action="{{ 'admin.projects.index' }}" method="GET">
                                 @csrf
                                 <input class="form-control d-inline-block w-50" type="text" name="search" placeholder="try to find">
-                                <button class="btn btn-outline-secondary" type="submit">Find</button>
+                                <button class="btn btn-outline-secondary mb-1" type="submit">Find</button>
                             </form>
                         </li>
                         <li class="nav-item px-5">
