@@ -44,16 +44,25 @@
             </div>
              <div class="mb-3">
                 <label for="cover_image" class="form-label">Add image</label>
-                <input type="file" class="form-control @error('cover_image') is-invalid @enderror" name="cover_image" id="cover_image" value="{{ old('cover_image') }}" placeholder="URL Image">
+                <input onchange="showImage(event)" type="file" class="form-control @error('cover_image') is-invalid @enderror" name="cover_image" id="cover_image" value="{{ old('cover_image') }}" placeholder="URL Image">
                 @error('cover_image')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
                 @enderror
+                <div class="image mt-2">
+                    <img width="120" id="output-image" src="" alt="">
+                </div>
             </div>
             <button type="submit" class="btn btn-primary">Send</button>
         </form>
     </div>
+    <script>
+        function showImage(event){
+            const tagImage = document.getElementById('output-image');
+            tagImage.src = URL.createObjectUrl(event.target.files[0]);
+        }
+    </script>
 @endsection
 
 @section('title')
