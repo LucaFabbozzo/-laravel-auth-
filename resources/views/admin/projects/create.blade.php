@@ -35,7 +35,7 @@
             </div>
             <div class="mb-3">
                 <label for="summary" class="form-label">Summary</label>
-                <textarea class="form-control @error('summary') is-invalid @enderror" id="summary" name="summary" placeholder="Insert a summary" rows="3"></textarea>
+                <textarea class="form-control" id="summary" name="summary" placeholder="Insert a summary" rows="3"></textarea>
                 @error('summary')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -58,6 +58,14 @@
         </form>
     </div>
     <script>
+        ClassicEditor
+        .create( document.querySelector( '#summary' ), {
+            toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote'],
+        } )
+        .catch( error => {
+            console.error( error );
+        } );
+
         function showImage(event){
         const tagImage = document.getElementById('output-image');
         tagImage.src = URL.createObjectURL(event.target.files[0]);

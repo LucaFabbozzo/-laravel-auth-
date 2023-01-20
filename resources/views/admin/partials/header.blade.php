@@ -24,6 +24,13 @@
                         </li>
                         @endif
                         @else
+                        <li class="nav-item px-3">
+                            <form action="{{ 'admin.projects.index' }}" method="GET">
+                                @csrf
+                                <input class="form-control d-inline-block w-50" type="text" name="search" placeholder="try to find">
+                                <button class="btn btn-outline-secondary" type="submit">Find</button>
+                            </form>
+                        </li>
                         <li class="nav-item px-5">
                             <a class="nav-link text-uppercase pb-page text-light" href="{{route('home')}}"><i class="fa-solid fa-earth-americas me-1"></i>Public Page</a>
                         </li>

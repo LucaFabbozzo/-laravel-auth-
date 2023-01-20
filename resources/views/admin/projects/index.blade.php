@@ -26,7 +26,7 @@
                     </td>
                 </tr>
                 @empty
-
+                <h2>No result</h2>
                 @endforelse
             </tbody>
         </table>
