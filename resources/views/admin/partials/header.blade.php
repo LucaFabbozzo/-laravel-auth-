@@ -25,7 +25,7 @@
                         @endif
                         @else
                         <li class="nav-item px-3">
-                            <form action="{{ 'admin.projects.index' }}" method="GET">
+                            <form action="{{route('admin.projects.index')}}" method="GET">
                                 @csrf
                                 <input class="form-control d-inline-block w-50" type="text" name="search" placeholder="try to find">
                                 <button class="btn btn-outline-secondary mb-1" type="submit">Find</button>

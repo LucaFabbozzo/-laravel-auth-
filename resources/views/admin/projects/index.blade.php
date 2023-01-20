@@ -15,7 +15,7 @@
             <tbody>
                 @forelse ($projects as $project)
                 <tr>
-                    <td><img style="width: 60px" src="{{ $project->cover_image }}" alt="{{ $project->name }}"></td>
+                    <td><img style="width: 60px" src="{{asset('storage/'. $project->cover_image)}}" alt="{{$project->image_original_name}}"></td>
                     <td>{{ $project->name }}</th>
                     <td>{{ $project->client_name }}</td>
                     <td>{{ $project->summary }}</td>
