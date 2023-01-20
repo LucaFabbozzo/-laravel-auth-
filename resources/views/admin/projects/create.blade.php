@@ -13,7 +13,7 @@
                 </ul>
             </div>
         @endif
-        <form action="{{ route('admin.projects.store') }}" method="POST">
+        <form action="{{ route('admin.projects.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
@@ -43,8 +43,8 @@
                 @enderror
             </div>
              <div class="mb-3">
-                <label for="cover_image" class="form-label">URL Image</label>
-                <input type="text" class="form-control @error('cover_image') is-invalid @enderror" name="cover_image" id="cover_image" value="{{ old('cover_image') }}" placeholder="URL Image">
+                <label for="cover_image" class="form-label">Add image</label>
+                <input type="file" class="form-control @error('cover_image') is-invalid @enderror" name="cover_image" id="cover_image" value="{{ old('cover_image') }}" placeholder="URL Image">
                 @error('cover_image')
                     <div class="invalid-feedback">
                         {{ $message }}
