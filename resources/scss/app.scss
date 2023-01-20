@@ -13,6 +13,23 @@ main {
     border: 1px solid #bdbdbd;
 }
 
+.pag-box {
+    .pagination {
+        .page-item {
+            margin: 0 2px;
+            &.active .page-link {
+                background-color: #747474;
+            }
+            .page-link {
+                border: none;
+                background-color: #313131;
+                color: white;
+                border-radius: 7px;
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
 
 .pb-page {
     color: #313131;

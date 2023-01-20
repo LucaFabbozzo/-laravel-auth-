@@ -3,7 +3,7 @@
 @section('content')
     <div class="container w-75 m-auto pt-3">
             <h1 class="fs-5 text-uppercase">My Projects List</h1>
-        <table class="table table-striped mb-5">
+        <table class="table table-striped mb-4">
             <thead>
                 <tr>
                     <th scope="col">Cover</th>
@@ -30,8 +30,10 @@
                 @endforelse
             </tbody>
         </table>
+         <div class="pag-box">
+            {{$projects->links()}}
+        </div>
     </div>
-        {{$projects->links()}}
 @endsection
 
 @section('title')
