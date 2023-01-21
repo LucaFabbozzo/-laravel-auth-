@@ -27,7 +27,7 @@
                         <li class="nav-item">
                             <form action="{{route('admin.projects.index')}}" method="GET">
                                 @csrf
-                                <input class="form-control d-inline-block w-50" type="text" name="search" placeholder="try to find">
+                                <input class="form-control d-inline-block w-75 px-5" type="text" name="search" placeholder="Find into the projects">
                                 <button class="btn btn-outline-secondary mb-1" type="submit">Find</button>
                             </form>
                         </li>
@@ -40,8 +40,8 @@
                                 <a class="dropdown-item text-light mt-2 px-3 text-uppercase fs-6" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
+                                    <img class="avatar" src="{{ Vite::asset('resources/img/luca.jpg')}}" alt="">
                                 </a>
-
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>

@@ -2,11 +2,19 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    background-color: #eaeaea;
 }
 
 main {
     height: calc(100vh - 82px);
     overflow-y: auto;
+}
+
+.avatar {
+    width: 25px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-bottom: 4px;
 }
 
 .box {
