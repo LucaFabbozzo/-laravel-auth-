@@ -13,11 +13,11 @@
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">
-                            <a class="text-light text-uppercase fs-6" href="{{ route('login') }}">Login</a>
+                            <a class="text-light fs-6 text-decoration-none" href="{{ route('login') }}">Login</a>
                         </li>
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="text-light text-uppercase fs-6" href="{{ route('register') }}">Register</a>
+                            <a class="text-light  fs-6 text-decoration-none" href="{{ route('register') }}">Register</a>
                         </li>
                         @endif
                         @else
