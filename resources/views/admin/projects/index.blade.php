@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container w-75 m-auto pt-3">
+    <div class="container w-100 m-auto pt-3 p-4">
             <h1 class="fs-5 text-uppercase">My Projects List</h1>
             <form class="py-2" action="{{route('admin.projects.index')}}" method="GET">
                 @csrf
