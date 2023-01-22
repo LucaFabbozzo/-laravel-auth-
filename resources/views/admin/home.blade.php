@@ -9,6 +9,7 @@
             <h3>Welcome to Admin page!</h3>
             <p class="text-muted">We are assembled some links to get your started</p>
             <p class="fs-4">Get Started!</p>
+            <p>Total Projects: {{ $count_project }}</p>
             <a class="btn btn-outline-primary fw-light text-uppercase create" href="{{route('admin.projects.create')}}">Add new project</a>
             {{-- <p>{{ Auth::user()->name }}</p>
             <p>{{ Auth::user()->email }}</p> --}}
